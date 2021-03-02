@@ -751,16 +751,14 @@ bool XMLParser::ParserStruct(TiXmlNode* pNode, TiXmlElement* pElement)
 
 	//如果结构体有构造增加默认值
 	if (tt_struct._bWithConstruct) {
-		for (size_t i = 0; i < tt_struct._ParVec.size(); i++) {
-			if (!tt_struct._ParVec[i]._bWithDefault && tt_struct._ParVec[i]._strDefaultValue == "") {
-				tt_struct._ParVec[i]._strDefaultValue = GetBaseTypeDefault(tt_struct._ParVec[i]._strParType);
-				if (tt_struct._ParVec[i]._strDefaultValue.length() > 0) {
-					tt_struct._ParVec[i]._bWithDefault = true;
+		for (auto& r : tt_struct._ParVec) {
+			if (!r._bWithDefault && r._strDefaultValue == "") {
+				r._strDefaultValue = GetBaseTypeDefault(r._strParType);
+				if (r._strDefaultValue.length() > 0) {
+					r._bWithDefault = true;
 				}
-				
 			}
 		}
-
 	}
 
 	m_NamespaceVec[0]._StructVec.push_back(tt_struct);
@@ -1037,19 +1035,20 @@ bool XMLParser::ParserClass(TiXmlNode* pNode, TiXmlElement* pElement, bool brequ
 		m_bUsePartProtocol = true;
 		//确认是否将此区下的函数都置为丢弃
 		if (!TestPartIsOk(tt_part)) {
-			for (unsigned int i = 0; i < tt_class._FuncVec.size(); i++) {
-				tt_class._FuncVec[i]._bDiscard = true;
+			for (auto& r : tt_class._FuncVec) {
+				r._bDiscard = true;
 			}
 		}
 
-		for (unsigned int i = 0; i < m_NamespaceVec[0]._ClassVec.size(); i++) {
-			if (m_NamespaceVec[0]._ClassVec[i]._strtype == tt_class._strtype) {
-				for (unsigned int j = 0; j < tt_class._FuncVec.size(); j++) {
-					m_NamespaceVec[0]._ClassVec[i]._FuncVec.push_back(tt_class._FuncVec[j]);
+		for (auto& m : m_NamespaceVec[0]._ClassVec) {
+			if (m._strtype == tt_class._strtype) {
+				for (auto& r : tt_class._FuncVec) {
+					m._FuncVec.push_back(r);
 				}
 				return true;
 			}
 		}
+
 	}
 	m_NamespaceVec[0]._ClassVec.push_back(tt_class);
 	return true;
@@ -1407,11 +1406,10 @@ bool XMLParser::IsExType_enum(const string& strtypename)
 		return false;
 	vector<stEnum> pEnum = m_NamespaceVec[m_NamespaceVec.size() - 1]._EnumVec;
 
-	for (size_t i = 0; i < pEnum.size(); i++) {
-		if (pEnum[i]._name.compare(strtypename) == 0)
+	for (auto& r : pEnum) {
+		if (r._name.compare(strtypename) == 0)
 			return true;
 	}
-
 
 	return false;
 }
@@ -1420,8 +1418,8 @@ bool XMLParser::IsExType_struct(const string& strtypename)
 	if (m_NamespaceVec.size() == 0)
 		return false;
 	vector<stStructStruct> pstruct = m_NamespaceVec[m_NamespaceVec.size() - 1]._StructVec;
-	for (size_t i = 0; i < pstruct.size(); i++) {
-		if (pstruct[i]._name.compare(strtypename) == 0)
+	for (auto& r : pstruct) {
+		if (r._name.compare(strtypename) == 0)
 			return true;
 	}
 
@@ -1433,8 +1431,8 @@ bool XMLParser::IsExType_vector(const string& strtypename)
 		return false;
 	vector<stVector> pVector = m_NamespaceVec[m_NamespaceVec.size() - 1]._VectorVec;
 
-	for (size_t i = 0; i < pVector.size(); i++) {
-		if (pVector[i]._name.compare(strtypename) == 0)
+	for (auto& r : pVector) {
+		if (r._name.compare(strtypename) == 0)
 			return true;
 	}
 
@@ -1446,10 +1444,11 @@ bool XMLParser::IsExType_WJSVector(const string& strtypename) //是否是另外版本的
 		return false;
 	vector<stWJSVector> pVector = m_NamespaceVec[m_NamespaceVec.size() - 1]._WJSVectorVec;
 
-	for (size_t i = 0; i < pVector.size(); i++) {
-		if (pVector[i]._name.compare(strtypename) == 0)
+	for (auto& r : pVector) {
+		if (r._name.compare(strtypename) == 0)
 			return true;
 	}
+
 	return false;
 }
 #pragma endregion
@@ -1599,9 +1598,9 @@ void   XMLParser::AddToPartManage(const string& partManageName, const string& pa
 	m_PartManageMap[partManageName].insert(partName);
 
 
-	for (size_t i = 0; i < m_PartManageList.size(); i++) {
-		if (m_PartManageList[i]._name == partManageName) {
-			m_PartManageList[i]._partList.push_back(partName);
+	for (auto& r : m_PartManageList) {
+		if (r._name == partManageName) {
+			r._partList.push_back(partName);
 			return;
 		}
 	}
@@ -1619,10 +1618,11 @@ void   XMLParser::AddToYuanPartList(const string& partName)
 	if (partName.length() == 0)
 		return;
 
-	for (size_t i = 0; i < m_YuanPartList.size(); i++) {
-		if (m_YuanPartList[i] == partName)
+	for (auto& r : m_YuanPartList) {
+		if (r == partName)
 			return;
 	}
+
 	m_YuanPartList.push_back(partName);
 
 }

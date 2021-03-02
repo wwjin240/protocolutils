@@ -8,6 +8,10 @@ EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "tinyxmlSTL", "tinyxml\tinyxmlSTL.vcxproj", "{7D68B11C-48A0-47B1-BAF2-1199E1227270}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "protocolgenxml", "protocolgenxml\protocolgenxml.vcxproj", "{B465FC55-9566-4FB8-9016-433C64D19F37}"
+	ProjectSection(ProjectDependencies) = postProject
+		{7D68B11C-48A0-47B1-BAF2-1199E1227270} = {7D68B11C-48A0-47B1-BAF2-1199E1227270}
+		{02562186-C08F-4C6C-A8D7-49693DB3DA24} = {02562186-C08F-4C6C-A8D7-49693DB3DA24}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

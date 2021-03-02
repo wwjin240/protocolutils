@@ -1,0 +1,90 @@
+//生成参数
+//-i后带要解析的协议文件
+//-ops后带解析后服务器端输出的路径带/
+//-opc后带解析后客户端输出的路径带/
+//-s代表要解析服务器
+//-c代表要解析客户端
+//-sc代表客户端和服务器生成在一个文件上
+//-opsc代表在-sc模式下解析后的输出路径 带/
+//-is代表解析Iphone平台的服务器端
+//-ic代表解析Iphone平台的客户端
+//-isc代表解析Iphone平台的服务器端和客户端
+//-ws代表解析Flash平台的服务器端
+//-wc代表解析Flash平台的客户器端
+//-wsc代表解析Flash平台的服务器和客户端
+
+目前支持的参数类型
+{"void","int","unsigned int","short","unsigned short","char","byte","BYTE","bool","BOOL", \
+"DWORD","float","long","unsigned long","string","__int64","wjs_char32","wjs_char64","wjs_char128","wjs_char256","wjs_char512","wjs_char1024"};
+
+<?xml version="1.0" encoding="utf-8" ?>
+<!--协议生成的服务器名和客户端名-->
+<protocol name = "NiuNiu" >  <!--服务器和客户端的名称分别是追加Server和Client-->
+  <protocolNo name="NiuNiu_No" value="1000"/> <!--协议号,每个协议应不同1000-2000由服务器用，具体游戏用2000以上-->
+  <!--引用的协议名,考虑到通用一些结构体等，所以提供这个功能-->
+  <protocolRef   value1="协议名称" value2="包含头名称S",value3="包含头名称C", value4="命名空间名"/>
+  <namespacename value1="服务器命名空间" value2="客户端命名空间"/>
+  
+    <!--协议版本信息-->
+  <VManger name="Version">
+  <!--默认的版本号-->
+  <member name = "defversion" value = "1"/>
+  <!--参数版本号,每次增加版本号，都需要增加新的，当确认合并时，只需要将桌的都指为同一值，默认值即可-->
+  <member name = "parversion1" value = "1"/>
+  <member name = "parversion2" value = "2"/>
+  <member name = "parversion3" value = "3"/>
+  </VManger>
+
+  <!-- 枚举-->
+  <enum name = "NiuNiuGameState">
+    <member name = "name1"/>  
+    <member name = "name2"/
+  </enum>
+
+  <!--结构体-->
+  <struct name = "structname">    
+    <member name = "name1" type = "int"/>
+    <member name = "name2" type = "int"/>
+    <member name = "name3" type = "int"/>
+  </struct>
+  
+   <!--结构体-->
+  <struct name = "structname">    
+    <member name = "name1" type = "int"/>
+    <member name = "name2" type = "int"/>
+    <member name = "name3" type = "int"/>
+  </struct>
+
+
+  <!--vector型-->
+  <sequence name= "vectorname" element="模板类型"/>
+
+  <request name = "名">    <!--客户端发送给服务器的消息-->
+       <!--函数，也称为方法-->
+       <method name = "funcname">                        
+         <param name = "par1"	  type = "int"/>
+         <param name = "par2"	  type = "int"/>
+       </method>
+  </request>
+
+  <callback name = "名" "> 
+       <!--函数，也称为方法-->
+       <method name = "funcname">                        
+         <param name = "par1"	  type = "int"/>
+         <param name = "par2"	type = "int"/>
+       </method>
+  </callback>
+  
+  带版本号用法,只用于结构体,函数
+  版本号为0时，表明按最新版进行
+  <struct name = "structname" vertion = "parversion1">    
+    <member name = "name1" type = "int" vertion = "parversion1"/>
+    <member name = "name2" type = "int" vertion = "parversion1"/>
+    <member name = "name3" type = "int" vertion = "parversion1"/>
+  </struct>
+
+       <method name = "funcname" vertion = "parversion1">                        
+         <param name = "par1"	  type = "int" vertion = "parversion1"/>
+         <param name = "par2"	type = "int" vertion = "parversion1"/>
+       </method>
+</protocol>
