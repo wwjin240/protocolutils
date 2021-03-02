@@ -10,6 +10,10 @@ class ProtocolParse_Writer_CPlus : public ProtocolParse_Writer
 public:
 	ProtocolParse_Writer_CPlus(const string& strPathName, eCPlusStandardType cplusStandardType,bool bUseStdByte);
 	virtual ~ProtocolParse_Writer_CPlus();
+public:
+	virtual void    WriteInfoHead(FILE* fp, bool bLua = false, bool bPython = false) override;//дͷ
+	virtual void    WriteStartZhongKuoKao(FILE* fp) override;  //д{}
+	virtual void    WriteEndZhongKuoKao(FILE* fp) override;
 
 public:
 	/**

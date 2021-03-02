@@ -80,9 +80,9 @@ void     ProtocolParse_Writer::FreeWriteLog()//Çå³ýÐ´¼ÇÂ¼
 	m_IntStringMap.Free();
 	m_StringIntSearchMap.Free();
 
-	for (size_t i = 0; i < m_pRefProtocolParseList.size(); i++) {
-		if (m_pRefProtocolParseList[i]) {
-			m_pRefProtocolParseList[i]->FreeWriteLog();
+	for (auto& p : m_pRefProtocolParseList) {
+		if (p) {
+			p->FreeWriteLog();
 		}
 	}
 }
@@ -119,9 +119,9 @@ void   ProtocolParse_Writer::TestBaseParIsConstRef(stBasePar& pPar)
 	//²»ÊÇ»ù´¡ÀàÐÍ£¬Ò²²»ÊÇÃ¶¾Ù
 	if (!IsBaseType(pPar._strParType) && (!IsExType_enum(pPar._strParType))) {
 		if (m_pRefProtocolParseList.size() > 0) {
-			for (size_t i = 0; i < m_pRefProtocolParseList.size(); i++) {
-				if (m_pRefProtocolParseList[i])
-					m_pRefProtocolParseList[i]->TestBaseParIsConstRef(pPar);
+			for (auto& p : m_pRefProtocolParseList) {
+				if (p)
+					p->TestBaseParIsConstRef(pPar);
 			}
 		}
 		else
@@ -191,13 +191,11 @@ bool ProtocolParse_Writer::IsValidType(const string& strtypename)
 	if (XMLParser::IsValidType(strtypename))
 		return true;
 
-	for (size_t i = 0; i < m_pRefProtocolParseList.size(); i++) {
-		if (m_pRefProtocolParseList[i]) {
-			if (m_pRefProtocolParseList[i]->IsValidType(strtypename))
-				return true;
+	for (auto& p : m_pRefProtocolParseList) {
+		if (p && p->IsValidType(strtypename)) {
+			return true;
 		}
 	}
-
 
 	m_strErrorReason = "invalid typename";
 	return false;
@@ -208,10 +206,9 @@ bool ProtocolParse_Writer::IsExType_enum(const string& strtypename)
 	if (XMLParser::IsExType_enum(strtypename))
 		return true;
 
-	for (size_t i = 0; i < m_pRefProtocolParseList.size(); i++) {
-		if (m_pRefProtocolParseList[i]) {
-			if (m_pRefProtocolParseList[i]->IsExType_enum(strtypename))
-				return true;
+	for (auto& p : m_pRefProtocolParseList) {
+		if (p && p->IsExType_enum(strtypename)) {
+			return true;
 		}
 	}
 
@@ -224,11 +221,8 @@ bool ProtocolParse_Writer::IsExType_struct(const string& strtypename)
 		return true;
 
 	if (m_pRefProtocolParseList.size() > 0) {
-		for (size_t j = 0; j < m_pRefProtocolParseList.size(); j++) {
-			if (!m_pRefProtocolParseList[j])
-				continue;
-
-			if (m_pRefProtocolParseList[j]->IsExType_struct(strtypename))
+		for (auto& p : m_pRefProtocolParseList) {
+			if (p && p->IsExType_struct(strtypename))
 				return true;
 		}
 	}
@@ -241,11 +235,8 @@ bool ProtocolParse_Writer::IsExType_vector(const string& strtypename)
 		return true;
 
 	if (m_pRefProtocolParseList.size() > 0) {
-		for (size_t j = 0; j < m_pRefProtocolParseList.size(); j++) {
-			if (!m_pRefProtocolParseList[j])
-				continue;
-
-			if (m_pRefProtocolParseList[j]->IsExType_vector(strtypename))
+		for (auto& p : m_pRefProtocolParseList) {
+			if (p && p->IsExType_vector(strtypename))
 				return true;
 		}
 	}
@@ -255,16 +246,13 @@ bool ProtocolParse_Writer::IsExType_WJSVector(const string& strtypename) //ÊÇ·ñÊ
 {
 	if (XMLParser::IsExType_WJSVector(strtypename))
 		return true;
-
 	if (m_pRefProtocolParseList.size() > 0) {
-		for (size_t j = 0; j < m_pRefProtocolParseList.size(); j++) {
-			if (!m_pRefProtocolParseList[j])
-				continue;
-
-			if (m_pRefProtocolParseList[j]->IsExType_WJSVector(strtypename))
+		for (auto& p : m_pRefProtocolParseList) {
+			if (p && p->IsExType_WJSVector(strtypename))
 				return true;
 		}
 	}
+
 	return false;
 }
 #pragma endregion
@@ -283,13 +271,12 @@ string ProtocolParse_Writer::GetExTypeParT_vector(const string& strtypename)
 	}
 
 	if (m_pRefProtocolParseList.size() > 0) {
-		for (size_t j = 0; j < m_pRefProtocolParseList.size(); j++) {
-			if (!m_pRefProtocolParseList[j])
-				continue;
-
-			string tt_str = m_pRefProtocolParseList[j]->GetExTypeParT_vector(strtypename);
-			if (tt_str.length() > 0)
-				return tt_str;
+		for (auto& p : m_pRefProtocolParseList) {
+			if (p) {
+				string tt_str = p->GetExTypeParT_vector(strtypename);
+				if (tt_str.length() > 0)
+					return tt_str;
+			}
 		}
 	}
 	return "";
@@ -301,20 +288,19 @@ string ProtocolParse_Writer::GetExTypeParT_WJSVector(const string& strtypename)
 		return "";
 	const vector<stWJSVector>& pWJSVector = m_NamespaceVec[m_NamespaceVec.size() - 1]._WJSVectorVec;
 
-	for (size_t i = 0; i < pWJSVector.size(); i++) {
-		if (pWJSVector[i]._name.compare(strtypename) == 0) {
-			return pWJSVector[i]._ParTName;
+	for (const auto& r : pWJSVector) {
+		if (r._name.compare(strtypename) == 0) {
+			return r._ParTName;
 		}
 	}
 
 	if (m_pRefProtocolParseList.size() > 0) {
-		for (size_t j = 0; j < m_pRefProtocolParseList.size(); j++) {
-			if (!m_pRefProtocolParseList[j])
-				continue;
-
-			string tt_str = m_pRefProtocolParseList[j]->GetExTypeParT_WJSVector(strtypename);
-			if (tt_str.length() > 0)
-				return tt_str;
+		for (auto& p : m_pRefProtocolParseList) {
+			if (p) {
+				string tt_str = p->GetExTypeParT_WJSVector(strtypename);
+				if (tt_str.length() > 0)
+					return tt_str;
+			}
 		}
 	}
 	return "";
@@ -325,16 +311,16 @@ int  ProtocolParse_Writer::IsExType_baseVector_DiGui(const string& strtypename, 
 		return 0;
 	const vector<stVector>& pVector = m_NamespaceVec[m_NamespaceVec.size() - 1]._VectorVec;
 
-	for (size_t i = 0; i < pVector.size(); i++) {
-		if (pVector[i]._name.compare(strtypename) == 0) {
-			if (pVector[i]._bBaseParT) {
+	for (auto& r : pVector) {
+		if (r._name.compare(strtypename) == 0) {
+			if (r._bBaseParT) {
 				switch (filetype) {
 				case 0:
-					strNameSpace = m_NamespaceVec[m_NamespaceVec.size() - 1]._clientname;
+					strNameSpace = m_NamespaceVec.back()._clientname;
 					break;
 				case 1:
 				case 2:
-					strNameSpace = m_NamespaceVec[m_NamespaceVec.size() - 1]._servername;
+					strNameSpace = m_NamespaceVec.back()._servername;
 					break;
 				default:
 					return -1;
@@ -347,17 +333,18 @@ int  ProtocolParse_Writer::IsExType_baseVector_DiGui(const string& strtypename, 
 		}
 	}
 
-	const vector<stWJSVector>& pWJSVector = m_NamespaceVec[m_NamespaceVec.size() - 1]._WJSVectorVec;
-	for (size_t i = 0; i < pWJSVector.size(); i++) {
-		if (pWJSVector[i]._name.compare(strtypename) == 0) {
-			if (pWJSVector[i]._bBaseParT) {
+
+	const vector<stWJSVector>& pWJSVector = m_NamespaceVec.back()._WJSVectorVec;
+	for (auto& r : pWJSVector) {
+		if (r._name.compare(strtypename) == 0) {
+			if (r._bBaseParT) {
 				switch (filetype) {
 				case 0:
-					strNameSpace = m_NamespaceVec[m_NamespaceVec.size() - 1]._clientname;
+					strNameSpace = m_NamespaceVec.back()._clientname;
 					break;
 				case 1:
 				case 2:
-					strNameSpace = m_NamespaceVec[m_NamespaceVec.size() - 1]._servername;
+					strNameSpace = m_NamespaceVec.back()._servername;
 					break;
 				default:
 					return -1;
@@ -369,13 +356,14 @@ int  ProtocolParse_Writer::IsExType_baseVector_DiGui(const string& strtypename, 
 			return -1;
 		}
 	}
+
 	if (m_pRefProtocolParseList.size() > 0) {
-		for (int j = 0; j < (int)m_pRefProtocolParseList.size(); j++) {
-			if (!m_pRefProtocolParseList[j])
-				continue;
-			int tt_ret = m_pRefProtocolParseList[j]->IsExType_baseVector_DiGui(strtypename, filetype, strNameSpace);
-			if (tt_ret != 0)
-				return tt_ret;
+		for (auto& p : m_pRefProtocolParseList) {
+			if (p) {
+				int tt_ret = p->IsExType_baseVector_DiGui(strtypename, filetype, strNameSpace);
+				if (tt_ret != 0)
+					return tt_ret;
+			}
 		}
 	}
 
@@ -386,146 +374,6 @@ bool ProtocolParse_Writer::IsExType_baseVector(const string& strtypename, int fi
 	if (IsExType_baseVector_DiGui(strtypename, filetype, strNameSpace) == 1)
 		return true;
 	return false;
-	//if(!m_bAndroidPeer)
-	//return false;
-	//if(m_NamespaceVec.size()==0)
-	//	return false;
-
-	//vector<stVector> pVector=m_NamespaceVec[m_NamespaceVec.size()-1]._VectorVec;
-
-	//for(int i=0;i<pVector.size();i++)
-	//{
-	//	if(pVector[i]._name.compare(strtypename)==0)
-	//	{
-	//		if(pVector[i]._bBaseParT)
-	//		{
-	//			switch(filetype)
-	//			{
-	//			case 0:
-	//				strNameSpace = m_NamespaceVec[m_NamespaceVec.size()-1]._clientname;
-	//				break;
-	//			case 1:
-	//			case 2:
-	//				strNameSpace = m_NamespaceVec[m_NamespaceVec.size()-1]._servername;
-	//				break;
-	//			default:
-	//				return false;
-	//			}
-	//			
-	//		   return true;
-	//		}
-
-	//		return false;
-	//	}
-	//}
-
-
-	//if(m_pRefProtocolParseList.size()>0)
-	//{
-	//	for(int j=0;j<(int)m_pRefProtocolParseList.size();j++)
-	//	{
-	//		if(!m_pRefProtocolParseList[j])
-	//			continue;
-
-	//		pVector = m_pRefProtocolParseList[j]->m_NamespaceVec[m_pRefProtocolParseList[j]->m_NamespaceVec.size()-1]._VectorVec;
-	//		for(int i=0;i<pVector.size();i++)
-	//		{
-	//			if(pVector[i]._name.compare(strtypename)==0)
-	//			{
-	//				if(pVector[i]._bBaseParT)
-	//				{
-	//					switch(filetype)
-	//					{
-	//					case 0:
-	//						strNameSpace = m_pRefProtocolParseList[j]->m_NamespaceVec[m_pRefProtocolParseList[j]->m_NamespaceVec.size()-1]._clientname;
-	//						break;
-	//					case 1:
-	//					case 2:
-	//						strNameSpace = m_pRefProtocolParseList[j]->m_NamespaceVec[m_pRefProtocolParseList[j]->m_NamespaceVec.size()-1]._servername;
-	//						break;
-	//					default:
-	//						return false;
-	//					}
-
-	//					return true;
-	//				}
-
-	//				return false;
-	//			}
-	//		}
-
-	//	}
-
-
-	//}
-
-	//vector<stWJSVector> pWJSVector=m_NamespaceVec[m_NamespaceVec.size()-1]._WJSVectorVec;
-	//for(int i=0;i<pWJSVector.size();i++)
-	//{
-	//	if(pWJSVector[i]._name.compare(strtypename)==0)
-	//	{
-	//		if(pWJSVector[i]._bBaseParT)
-	//		{
-	//			switch(filetype)
-	//			{
-	//			case 0:
-	//				strNameSpace = m_NamespaceVec[m_NamespaceVec.size()-1]._clientname;
-	//				break;
-	//			case 1:
-	//			case 2:
-	//				strNameSpace = m_NamespaceVec[m_NamespaceVec.size()-1]._servername;
-	//				break;
-	//			default:
-	//				return false;
-	//			}
-
-	//			return true;
-	//		}
-
-	//		return false;
-	//	}
-	//}
-
-	//if(m_pRefProtocolParseList.size()>0)
-	//{
-	//	for(int j=0;j<(int)m_pRefProtocolParseList.size();j++)
-	//	{
-	//		if(!m_pRefProtocolParseList[j])
-	//			continue;
-
-	//		pWJSVector = m_pRefProtocolParseList[j]->m_NamespaceVec[m_pRefProtocolParseList[j]->m_NamespaceVec.size()-1]._WJSVectorVec;
-	//		for(int i=0;i<pWJSVector.size();i++)
-	//		{
-	//			if(pWJSVector[i]._name.compare(strtypename)==0)
-	//			{
-	//				if(pWJSVector[i]._bBaseParT)
-	//				{
-	//					switch(filetype)
-	//					{
-	//					case 0:
-	//						strNameSpace = m_pRefProtocolParseList[j]->m_NamespaceVec[m_pRefProtocolParseList[j]->m_NamespaceVec.size()-1]._clientname;
-	//						break;
-	//					case 1:
-	//					case 2:
-	//						strNameSpace = m_pRefProtocolParseList[j]->m_NamespaceVec[m_pRefProtocolParseList[j]->m_NamespaceVec.size()-1]._servername;
-	//						break;
-	//					default:
-	//						return false;
-	//					}
-
-	//					return true;
-	//				}
-
-	//				return false;
-	//			}
-	//		}
-
-	//	}
-
-
-	//}
-
-	//return false;
 }
 
 #pragma endregion
@@ -736,14 +584,14 @@ bool    ProtocolParse_Writer::IsFlashBaseType(const string& strTypeName, bool bW
 }
 void    ProtocolParse_Writer::GetUsePacketNamesByParType(const string& strParType, vector<string>& packetNamesList)
 {
-	for (int i = 0; i < (int)m_NamespaceVec.size(); i++) {
-		for (int j = 0; j < (int)m_NamespaceVec[i]._StructVec.size(); j++) {
-			if (m_NamespaceVec[i]._StructVec[j]._name.compare(strParType.c_str()) == 0) {
-				AddPacketNames(packetNamesList, m_NamespaceVec[i]._protocolnamelower);
+	for (auto& r : m_NamespaceVec) {
+		for (auto& j : r._StructVec) {
+			if (j._name.compare(strParType.c_str()) == 0) {
+				AddPacketNames(packetNamesList, r._protocolnamelower);
 
-				for (int k = 0; k < (int)m_NamespaceVec[i]._StructVec[j]._ParVec.size(); k++) {
-					if (!IsFlashBaseType(m_NamespaceVec[i]._StructVec[j]._ParVec[k]._strParType, false)) {
-						GetUsePacketNamesByParType(m_NamespaceVec[i]._StructVec[j]._ParVec[k]._strParType, packetNamesList);
+				for (auto& k : j._ParVec) {
+					if (!IsFlashBaseType(k._strParType, false)) {
+						GetUsePacketNamesByParType(k._strParType, packetNamesList);
 					}
 				}
 
@@ -751,58 +599,54 @@ void    ProtocolParse_Writer::GetUsePacketNamesByParType(const string& strParTyp
 			}
 		}
 
-		for (int j = 0; j < (int)m_NamespaceVec[i]._VectorVec.size(); j++) {
-			if (m_NamespaceVec[i]._VectorVec[j]._name.compare(strParType.c_str()) == 0) {
-				AddPacketNames(packetNamesList, m_NamespaceVec[i]._protocolnamelower);
+		for (auto& j : r._VectorVec) {
+			if (j._name.compare(strParType.c_str()) == 0) {
+				AddPacketNames(packetNamesList, r._protocolnamelower);
 
-				if (!IsFlashBaseType(m_NamespaceVec[i]._VectorVec[j]._ParTName, false)) {
-					GetUsePacketNamesByParType(m_NamespaceVec[i]._VectorVec[j]._ParTName, packetNamesList);
+				if (!IsFlashBaseType(j._ParTName, false)) {
+					GetUsePacketNamesByParType(j._ParTName, packetNamesList);
 				}
 
 				return;
 			}
 		}
 
-		for (int j = 0; j < (int)m_NamespaceVec[i]._WJSVectorVec.size(); j++) {
-			if (m_NamespaceVec[i]._WJSVectorVec[j]._name.compare(strParType.c_str()) == 0) {
-				AddPacketNames(packetNamesList, m_NamespaceVec[i]._protocolnamelower);
 
-				if (!IsFlashBaseType(m_NamespaceVec[i]._WJSVectorVec[j]._ParTName, false)) {
-					GetUsePacketNamesByParType(m_NamespaceVec[i]._WJSVectorVec[j]._ParTName, packetNamesList);
+		for (auto& j : r._WJSVectorVec) {
+			if (j._name.compare(strParType.c_str()) == 0) {
+				AddPacketNames(packetNamesList, r._protocolnamelower);
+
+				if (!IsFlashBaseType(j._ParTName, false)) {
+					GetUsePacketNamesByParType(j._ParTName, packetNamesList);
 				}
 
 				return;
 			}
 		}
 
-		for (int j = 0; j < (int)m_NamespaceVec[i]._EnumVec.size(); j++) {
-			if (m_NamespaceVec[i]._EnumVec[j]._name.compare(strParType.c_str()) == 0) {
-				AddPacketNames(packetNamesList, m_NamespaceVec[i]._protocolnamelower);
-
+		for (auto& j : r._EnumVec) {
+			if (j._name.compare(strParType.c_str()) == 0) {
+				AddPacketNames(packetNamesList, r._protocolnamelower);
 				return;
 			}
 		}
+
 	}
 
-	for (int i = 0; i < (int)m_pRefProtocolParseList.size(); i++) {
-		if (m_pRefProtocolParseList[i])
-			m_pRefProtocolParseList[i]->GetUsePacketNamesByParType(strParType, packetNamesList);
+
+	for (auto& p : m_pRefProtocolParseList) {
+		if (p)
+			p->GetUsePacketNamesByParType(strParType, packetNamesList);
 	}
 
 }
 
 void    ProtocolParse_Writer::AddPacketNames(vector<string>& packetNamesList, const string& strNewPacketName)
 {
-	for (size_t i = 0; i < packetNamesList.size(); i++) {
-		if (packetNamesList[i].compare(strNewPacketName.c_str()) == 0)
+	for (auto& r : packetNamesList) {
+		if (r.compare(strNewPacketName.c_str()) == 0)
 			return;
 	}
-
-	//if (strNewPacketName.find("PhoneClient2Login/int") != string::npos) {
-	//	int a;
-	//	a = 10;
-	//}
-
 
 	packetNamesList.push_back(strNewPacketName);
 
@@ -826,21 +670,21 @@ void    ProtocolParse_Writer::RemovePacketNames(vector<string>& packetNamesList,
 
 void    ProtocolParse_Writer::GetUsePacketNamesByRefHead(vector<string>& packetNamesList, bool bXiaoXie)
 {
-	for (size_t i = 0; i < m_RefProtocolList.size(); i++) {
-		if (m_RefProtocolList[i]._usingspacename.length() > 0) {
+	for (auto& r : m_RefProtocolList) {
+		if (r._usingspacename.length() > 0) {
 			if (bXiaoXie) {
-				AddPacketNames(packetNamesList, ToLowerV2(m_RefProtocolList[i]._usingspacename));
+				AddPacketNames(packetNamesList, ToLowerV2(r._usingspacename));
 
 			}
 			else {
-				AddPacketNames(packetNamesList, m_RefProtocolList[i]._usingspacename);
+				AddPacketNames(packetNamesList, r._usingspacename);
 			}
 		}
 	}
 
-	for (size_t i = 0; i < m_pRefProtocolParseList.size(); i++) {
-		if (m_pRefProtocolParseList[i])
-			m_pRefProtocolParseList[i]->GetUsePacketNamesByRefHead(packetNamesList, bXiaoXie);
+	for (auto& p : m_pRefProtocolParseList) {
+		if (p)
+			p->GetUsePacketNamesByRefHead(packetNamesList, bXiaoXie);
 	}
 }
 #pragma endregion

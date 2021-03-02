@@ -156,9 +156,9 @@ public:
 	int  IsExType_baseVector_DiGui(const string& strtypename, int filetype, string& strNameSpace); //是否是vector ,且是基本类型，并返回命名空间,-1表不是，1表是，0表不能确认
 #pragma endregion 
 
-	void    WriteInfoHead(FILE* fp, bool bLua = false, bool bPython = false);//写头
-	void    WriteStartZhongKuoKao(FILE* fp);  //写{}
-	void    WriteEndZhongKuoKao(FILE* fp);
+	virtual void    WriteInfoHead(FILE* fp, bool bLua = false, bool bPython = false);//写头
+	virtual void    WriteStartZhongKuoKao(FILE* fp);  //写{}
+	virtual void    WriteEndZhongKuoKao(FILE* fp);
 
 	string  GetDefaultValue(const string& str, bool bFlash = false, bool bJava = false, bool bCSharp = false, bool bTScript = false, bool bPython = false); //根据类型得到默认值，只用于基本类型
 	
