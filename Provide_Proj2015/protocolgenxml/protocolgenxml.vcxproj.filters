@@ -1,0 +1,344 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="源文件">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="头文件">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="资源文件">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx</Extensions>
+    </Filter>
+    <Filter Include="说明">
+      <UniqueIdentifier>{4c15aeb1-b8c8-47d8-a094-74bd1b0cfc5d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="rapidjson">
+      <UniqueIdentifier>{e042e103-d35d-498c-bb90-d8cbfaa2b846}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="rapidjson\error">
+      <UniqueIdentifier>{e612eb4a-f3cb-4586-98f7-e4ff128f93e0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="rapidjson\internal">
+      <UniqueIdentifier>{9a85fc45-b973-4459-ae2c-b073a4dcfcb0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="rapidjson\msinttypes">
+      <UniqueIdentifier>{05028bce-6a9f-4419-a467-6580e33b6161}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="入口">
+      <UniqueIdentifier>{404c90b8-62e7-4143-90d3-cdc3fd4a869b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="公共头">
+      <UniqueIdentifier>{cce63096-4e09-4d54-855c-4bfab16b954e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="XML解析">
+      <UniqueIdentifier>{ea4b6991-a523-4dce-ae04-567466ca2d5f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="协议公共函数">
+      <UniqueIdentifier>{544694c5-566d-45a5-97a4-1e64be27c2f0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="协议解析">
+      <UniqueIdentifier>{28cd00c7-b2fa-4ca8-beee-4bf8dbf9779d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="协议解析\CPlus">
+      <UniqueIdentifier>{e6af5f66-9cfc-4315-9882-cfdd3624fe5c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="协议解析\IPhone">
+      <UniqueIdentifier>{ac109868-d6e8-4f52-ab2f-6c258753f334}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="协议解析\Flash">
+      <UniqueIdentifier>{8dec0c03-d4d0-4de1-9bef-1a521c0aaccf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="协议解析\Java">
+      <UniqueIdentifier>{7c3d4924-caee-4d7e-a112-0376d2adff5b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="协议解析\CSharp">
+      <UniqueIdentifier>{61fdd40d-877d-424d-be36-0685dc73bfcf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="协议解析\Lua">
+      <UniqueIdentifier>{d0810009-7422-45ea-8ee9-fb603381acd1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="协议解析\TSMiddle">
+      <UniqueIdentifier>{c044c533-9ddc-4fd1-90ad-5d534725de4c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="协议解析\Python">
+      <UniqueIdentifier>{e91d4570-978c-4e1c-be16-7918c86a0096}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="协议解析\JavaScript">
+      <UniqueIdentifier>{4bdadc38-465e-4fdc-8b19-50970de62eba}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="协议解析\TypeScript">
+      <UniqueIdentifier>{b3f6423e-9d01-4353-b7f8-748ed201ce66}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="协议编写格式.txt">
+      <Filter>说明</Filter>
+    </Text>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\Provide_Code\protocolgenxml\CCreateComment.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Provide_Code\protocolgenxml\CCreateEventFunc.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Provide_Code\protocolgenxml\Logger.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Provide_Code\protocolgenxml\md5.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Provide_Code\protocolgenxml\WJS_Lock.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Provide_Code\protocolgenxml\protocolgenxml.cpp">
+      <Filter>入口</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Provide_Code\protocolgenxml\XMLParser.cpp">
+      <Filter>XML解析</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Provide_Code\protocolgenxml\ProtocolUtils.cpp">
+      <Filter>协议公共函数</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Provide_Code\protocolgenxml\ProtocolParse.cpp">
+      <Filter>协议解析</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Provide_Code\protocolgenxml\ProtocolParse_Check.cpp">
+      <Filter>协议解析</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Provide_Code\protocolgenxml\ProtocolParse_Writer.cpp">
+      <Filter>协议解析</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Provide_Code\protocolgenxml\ProtocolParse_Share.cpp">
+      <Filter>协议解析</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Provide_Code\protocolgenxml\ProtocolParse_Writer_CPlus.cpp">
+      <Filter>协议解析\CPlus</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Provide_Code\protocolgenxml\ProtocolParse_Writer_IPhone.cpp">
+      <Filter>协议解析\IPhone</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Provide_Code\protocolgenxml\ProtocolParse_Writer_Flash.cpp">
+      <Filter>协议解析\Flash</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Provide_Code\protocolgenxml\ProtocolParse_Writer_Java.cpp">
+      <Filter>协议解析\Java</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Provide_Code\protocolgenxml\ProtocolParse_Writer_CSharp.cpp">
+      <Filter>协议解析\CSharp</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Provide_Code\protocolgenxml\ProtocolParse_Writer_Lua.cpp">
+      <Filter>协议解析\Lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Provide_Code\protocolgenxml\ProtocolParse_Writer_TSMiddle.cpp">
+      <Filter>协议解析\TSMiddle</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Provide_Code\protocolgenxml\ProtocolParse_Writer_Python.cpp">
+      <Filter>协议解析\Python</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Provide_Code\protocolgenxml\ProtocolParse_Writer_JavaScript.cpp">
+      <Filter>协议解析\JavaScript</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Provide_Code\protocolgenxml\ProtocolParse_Writer_TypeScript.cpp">
+      <Filter>协议解析\TypeScript</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Provide_Code\protocolgenxml\ProtocolParse_Writer_TypeScript_Model.cpp">
+      <Filter>协议解析\TypeScript</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Provide_Code\protocolgenxml\ProtocolParse_Writer_TypeScript_NSV.cpp">
+      <Filter>协议解析\TypeScript</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Provide_Code\protocolgenxml\PickParUtils.cpp">
+      <Filter>协议公共函数</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Provide_Code\protocolgenxml\ParsManager.cpp">
+      <Filter>协议公共函数</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\Provide_Code\protocolgenxml\CCreateComment.h">
+      <Filter>源文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Provide_Code\protocolgenxml\CCreateEventFunc.h">
+      <Filter>源文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Provide_Code\protocolgenxml\Logger.h">
+      <Filter>源文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Provide_Code\protocolgenxml\md5.h">
+      <Filter>源文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Provide_Code\protocolgenxml\wjs_bbstree.h">
+      <Filter>源文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Provide_Code\protocolgenxml\WJS_Lock.h">
+      <Filter>源文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Provide_Code\protocolgenxml\WJS_JsonStream.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Provide_Code\protocolgenxml\rapidjson\allocators.h">
+      <Filter>rapidjson</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Provide_Code\protocolgenxml\rapidjson\cursorstreamwrapper.h">
+      <Filter>rapidjson</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Provide_Code\protocolgenxml\rapidjson\document.h">
+      <Filter>rapidjson</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Provide_Code\protocolgenxml\rapidjson\encodedstream.h">
+      <Filter>rapidjson</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Provide_Code\protocolgenxml\rapidjson\encodings.h">
+      <Filter>rapidjson</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Provide_Code\protocolgenxml\rapidjson\filereadstream.h">
+      <Filter>rapidjson</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Provide_Code\protocolgenxml\rapidjson\filewritestream.h">
+      <Filter>rapidjson</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Provide_Code\protocolgenxml\rapidjson\fwd.h">
+      <Filter>rapidjson</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Provide_Code\protocolgenxml\rapidjson\istreamwrapper.h">
+      <Filter>rapidjson</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Provide_Code\protocolgenxml\rapidjson\memorybuffer.h">
+      <Filter>rapidjson</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Provide_Code\protocolgenxml\rapidjson\memorystream.h">
+      <Filter>rapidjson</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Provide_Code\protocolgenxml\rapidjson\ostreamwrapper.h">
+      <Filter>rapidjson</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Provide_Code\protocolgenxml\rapidjson\pointer.h">
+      <Filter>rapidjson</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Provide_Code\protocolgenxml\rapidjson\prettywriter.h">
+      <Filter>rapidjson</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Provide_Code\protocolgenxml\rapidjson\rapidjson.h">
+      <Filter>rapidjson</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Provide_Code\protocolgenxml\rapidjson\reader.h">
+      <Filter>rapidjson</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Provide_Code\protocolgenxml\rapidjson\schema.h">
+      <Filter>rapidjson</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Provide_Code\protocolgenxml\rapidjson\stream.h">
+      <Filter>rapidjson</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Provide_Code\protocolgenxml\rapidjson\stringbuffer.h">
+      <Filter>rapidjson</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Provide_Code\protocolgenxml\rapidjson\writer.h">
+      <Filter>rapidjson</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Provide_Code\protocolgenxml\rapidjson\error\en.h">
+      <Filter>rapidjson\error</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Provide_Code\protocolgenxml\rapidjson\error\error.h">
+      <Filter>rapidjson\error</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Provide_Code\protocolgenxml\rapidjson\internal\biginteger.h">
+      <Filter>rapidjson\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Provide_Code\protocolgenxml\rapidjson\internal\diyfp.h">
+      <Filter>rapidjson\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Provide_Code\protocolgenxml\rapidjson\internal\dtoa.h">
+      <Filter>rapidjson\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Provide_Code\protocolgenxml\rapidjson\internal\ieee754.h">
+      <Filter>rapidjson\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Provide_Code\protocolgenxml\rapidjson\internal\itoa.h">
+      <Filter>rapidjson\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Provide_Code\protocolgenxml\rapidjson\internal\meta.h">
+      <Filter>rapidjson\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Provide_Code\protocolgenxml\rapidjson\internal\pow10.h">
+      <Filter>rapidjson\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Provide_Code\protocolgenxml\rapidjson\internal\regex.h">
+      <Filter>rapidjson\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Provide_Code\protocolgenxml\rapidjson\internal\stack.h">
+      <Filter>rapidjson\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Provide_Code\protocolgenxml\rapidjson\internal\strfunc.h">
+      <Filter>rapidjson\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Provide_Code\protocolgenxml\rapidjson\internal\strtod.h">
+      <Filter>rapidjson\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Provide_Code\protocolgenxml\rapidjson\internal\swap.h">
+      <Filter>rapidjson\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Provide_Code\protocolgenxml\rapidjson\msinttypes\inttypes.h">
+      <Filter>rapidjson\msinttypes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Provide_Code\protocolgenxml\rapidjson\msinttypes\stdint.h">
+      <Filter>rapidjson\msinttypes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Provide_Code\protocolgenxml\XMLParser.h">
+      <Filter>XML解析</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Provide_Code\protocolgenxml\ProtocolParserHead.h">
+      <Filter>公共头</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Provide_Code\protocolgenxml\ProtocolUtils.h">
+      <Filter>协议公共函数</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Provide_Code\protocolgenxml\ProtocolParse.h">
+      <Filter>协议解析</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Provide_Code\protocolgenxml\ProtocolParse_Writer_CPlus.h">
+      <Filter>协议解析\CPlus</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Provide_Code\protocolgenxml\ProtocolParse_Writer_IPhone.h">
+      <Filter>协议解析\IPhone</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Provide_Code\protocolgenxml\ProtocolParse_Writer_Flash.h">
+      <Filter>协议解析\Flash</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Provide_Code\protocolgenxml\ProtocolParse_Writer_Java.h">
+      <Filter>协议解析\Java</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Provide_Code\protocolgenxml\ProtocolParse_Writer_CSharp.h">
+      <Filter>协议解析\CSharp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Provide_Code\protocolgenxml\ProtocolParse_Writer_Lua.h">
+      <Filter>协议解析\Lua</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Provide_Code\protocolgenxml\ProtocolParse_Writer_TSMiddle.h">
+      <Filter>协议解析\TSMiddle</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Provide_Code\protocolgenxml\ProtocolParse_Writer_Python.h">
+      <Filter>协议解析\Python</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Provide_Code\protocolgenxml\ProtocolParse_Writer_JavaScript.h">
+      <Filter>协议解析\JavaScript</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Provide_Code\protocolgenxml\ProtocolParse_Writer_TypeScript.h">
+      <Filter>协议解析\TypeScript</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Provide_Code\protocolgenxml\PickParUtil.h">
+      <Filter>协议公共函数</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Provide_Code\protocolgenxml\ShareHead.h">
+      <Filter>协议公共函数</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Provide_Code\protocolgenxml\ParsManager.h">
+      <Filter>协议公共函数</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

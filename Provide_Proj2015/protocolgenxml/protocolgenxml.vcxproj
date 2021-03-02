@@ -1,0 +1,451 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug_MT|Win32">
+      <Configuration>Debug_MT</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug_MT|x64">
+      <Configuration>Debug_MT</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release_MT|Win32">
+      <Configuration>Release_MT</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release_MT|x64">
+      <Configuration>Release_MT</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{B465FC55-9566-4FB8-9016-433C64D19F37}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <WindowsTargetPlatformVersion>10.0.18362.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release_MT|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release_MT|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug_MT|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug_MT|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared" />
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release_MT|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC71.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release_MT|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC71.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug_MT|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC71.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug_MT|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC71.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC71.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC71.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC71.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC71.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>14.0.25123.0</_ProjectFileVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>$(SolutionDir)$(Platform)\$(ProjectName)\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)$(Platform)\$(ProjectName)\$(Configuration)\</IntDir>
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+    <OutDir>$(SolutionDir)$(Platform)\$(ProjectName)\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)$(Platform)\$(ProjectName)\$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>$(SolutionDir)$(Platform)\$(ProjectName)\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)$(Platform)\$(ProjectName)\$(Configuration)\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+    <OutDir>$(SolutionDir)$(Platform)\$(ProjectName)\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)$(Platform)\$(ProjectName)\$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug_MT|Win32'">
+    <OutDir>$(Configuration)\</OutDir>
+    <IntDir>$(Configuration)\</IntDir>
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug_MT|x64'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release_MT|Win32'">
+    <OutDir>$(Configuration)\</OutDir>
+    <IntDir>$(Configuration)\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release_MT|x64'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <PreBuildEvent>
+      <Command />
+    </PreBuildEvent>
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;TIXML_USE_STL;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>false</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <PrecompiledHeader />
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>tinyxmld_STL.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>../bin32/protocolgenxmlD.exe</OutputFile>
+      <AdditionalLibraryDirectories>../lib32;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <IgnoreAllDefaultLibraries>false</IgnoreAllDefaultLibraries>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ProgramDatabaseFile>$(OutDir)protocolgenxmlD.pdb</ProgramDatabaseFile>
+      <SubSystem>Console</SubSystem>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <DataExecutionPrevention />
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <PreBuildEvent>
+      <Command>
+      </Command>
+    </PreBuildEvent>
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;TIXML_USE_STL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>tinyxmld_STL64.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>../bin64/protocolgenxml64D.exe</OutputFile>
+      <AdditionalLibraryDirectories>../lib64;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <IgnoreAllDefaultLibraries>false</IgnoreAllDefaultLibraries>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ProgramDatabaseFile>$(OutDir)protocolgenxmlD.pdb</ProgramDatabaseFile>
+      <SubSystem>Console</SubSystem>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <DataExecutionPrevention>
+      </DataExecutionPrevention>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;TIXML_USE_STL;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <PrecompiledHeader />
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>tinyxml_STL.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>../bin32/protocolgenxml.exe</OutputFile>
+      <AdditionalLibraryDirectories>../lib32;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <DataExecutionPrevention />
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;TIXML_USE_STL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>tinyxml_STL64.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>../bin64/protocolgenxml64.exe</OutputFile>
+      <AdditionalLibraryDirectories>../lib64;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <DataExecutionPrevention>
+      </DataExecutionPrevention>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug_MT|Win32'">
+    <PreBuildEvent>
+      <Command />
+    </PreBuildEvent>
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;TIXML_USE_STL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <PrecompiledHeader />
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>tinyxmld_STL.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>../bin/protocolgenxmlD.exe</OutputFile>
+      <AdditionalLibraryDirectories>../lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <IgnoreAllDefaultLibraries>false</IgnoreAllDefaultLibraries>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ProgramDatabaseFile>$(OutDir)protocolgenxmlD.pdb</ProgramDatabaseFile>
+      <SubSystem>Console</SubSystem>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <DataExecutionPrevention />
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug_MT|x64'">
+    <PreBuildEvent>
+      <Command>
+      </Command>
+    </PreBuildEvent>
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;TIXML_USE_STL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>tinyxmld_STL.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>../bin/protocolgenxmlD.exe</OutputFile>
+      <AdditionalLibraryDirectories>../lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <IgnoreAllDefaultLibraries>false</IgnoreAllDefaultLibraries>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ProgramDatabaseFile>$(OutDir)protocolgenxmlD.pdb</ProgramDatabaseFile>
+      <SubSystem>Console</SubSystem>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <DataExecutionPrevention>
+      </DataExecutionPrevention>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release_MT|Win32'">
+    <ClCompile>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;TIXML_USE_STL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <PrecompiledHeader />
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>tinyxml_STL.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>../bin/protocolgenxml.exe</OutputFile>
+      <AdditionalLibraryDirectories>../lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <DataExecutionPrevention />
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release_MT|x64'">
+    <ClCompile>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;TIXML_USE_STL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>tinyxml_STL.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>../bin/protocolgenxml.exe</OutputFile>
+      <AdditionalLibraryDirectories>../lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <DataExecutionPrevention>
+      </DataExecutionPrevention>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <Text Include="协议编写格式.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\Provide_Code\protocolgenxml\CCreateComment.cpp" />
+    <ClCompile Include="..\..\Provide_Code\protocolgenxml\CCreateEventFunc.cpp" />
+    <ClCompile Include="..\..\Provide_Code\protocolgenxml\Logger.cpp" />
+    <ClCompile Include="..\..\Provide_Code\protocolgenxml\md5.cpp" />
+    <ClCompile Include="..\..\Provide_Code\protocolgenxml\ParsManager.cpp" />
+    <ClCompile Include="..\..\Provide_Code\protocolgenxml\PickParUtils.cpp" />
+    <ClCompile Include="..\..\Provide_Code\protocolgenxml\protocolgenxml.cpp" />
+    <ClCompile Include="..\..\Provide_Code\protocolgenxml\ProtocolParse.cpp" />
+    <ClCompile Include="..\..\Provide_Code\protocolgenxml\ProtocolParse_Writer_CPlus.cpp" />
+    <ClCompile Include="..\..\Provide_Code\protocolgenxml\ProtocolParse_Writer_JavaScript.cpp" />
+    <ClCompile Include="..\..\Provide_Code\protocolgenxml\ProtocolParse_Share.cpp" />
+    <ClCompile Include="..\..\Provide_Code\protocolgenxml\ProtocolParse_Writer_TypeScript_Model.cpp" />
+    <ClCompile Include="..\..\Provide_Code\protocolgenxml\ProtocolParse_Writer_TypeScript_NSV.cpp" />
+    <ClCompile Include="..\..\Provide_Code\protocolgenxml\ProtocolParse_Check.cpp" />
+    <ClCompile Include="..\..\Provide_Code\protocolgenxml\ProtocolParse_Writer_CSharp.cpp" />
+    <ClCompile Include="..\..\Provide_Code\protocolgenxml\ProtocolParse_Writer_Flash.cpp" />
+    <ClCompile Include="..\..\Provide_Code\protocolgenxml\ProtocolParse_Writer_IPhone.cpp" />
+    <ClCompile Include="..\..\Provide_Code\protocolgenxml\ProtocolParse_Writer_Java.cpp" />
+    <ClCompile Include="..\..\Provide_Code\protocolgenxml\ProtocolParse_Writer_Lua.cpp" />
+    <ClCompile Include="..\..\Provide_Code\protocolgenxml\ProtocolParse_Writer_Python.cpp" />
+    <ClCompile Include="..\..\Provide_Code\protocolgenxml\ProtocolParse_Writer_TypeScript.cpp" />
+    <ClCompile Include="..\..\Provide_Code\protocolgenxml\ProtocolParse_Writer_TSMiddle.cpp" />
+    <ClCompile Include="..\..\Provide_Code\protocolgenxml\ProtocolParse_Writer.cpp" />
+    <ClCompile Include="..\..\Provide_Code\protocolgenxml\ProtocolUtils.cpp" />
+    <ClCompile Include="..\..\Provide_Code\protocolgenxml\WJS_Lock.cpp" />
+    <ClCompile Include="..\..\Provide_Code\protocolgenxml\XMLParser.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\Provide_Code\protocolgenxml\CCreateComment.h" />
+    <ClInclude Include="..\..\Provide_Code\protocolgenxml\CCreateEventFunc.h" />
+    <ClInclude Include="..\..\Provide_Code\protocolgenxml\Logger.h" />
+    <ClInclude Include="..\..\Provide_Code\protocolgenxml\md5.h" />
+    <ClInclude Include="..\..\Provide_Code\protocolgenxml\ParsManager.h" />
+    <ClInclude Include="..\..\Provide_Code\protocolgenxml\PickParUtil.h" />
+    <ClInclude Include="..\..\Provide_Code\protocolgenxml\ProtocolParse.h" />
+    <ClInclude Include="..\..\Provide_Code\protocolgenxml\ProtocolParserHead.h" />
+    <ClInclude Include="..\..\Provide_Code\protocolgenxml\ProtocolParse_Writer_CPlus.h" />
+    <ClInclude Include="..\..\Provide_Code\protocolgenxml\ProtocolParse_Writer_CSharp.h" />
+    <ClInclude Include="..\..\Provide_Code\protocolgenxml\ProtocolParse_Writer_Flash.h" />
+    <ClInclude Include="..\..\Provide_Code\protocolgenxml\ProtocolParse_Writer_IPhone.h" />
+    <ClInclude Include="..\..\Provide_Code\protocolgenxml\ProtocolParse_Writer_Java.h" />
+    <ClInclude Include="..\..\Provide_Code\protocolgenxml\ProtocolParse_Writer_JavaScript.h" />
+    <ClInclude Include="..\..\Provide_Code\protocolgenxml\ProtocolParse_Writer_Lua.h" />
+    <ClInclude Include="..\..\Provide_Code\protocolgenxml\ProtocolParse_Writer_Python.h" />
+    <ClInclude Include="..\..\Provide_Code\protocolgenxml\ProtocolParse_Writer_TSMiddle.h" />
+    <ClInclude Include="..\..\Provide_Code\protocolgenxml\ProtocolParse_Writer_TypeScript.h" />
+    <ClInclude Include="..\..\Provide_Code\protocolgenxml\ProtocolUtils.h" />
+    <ClInclude Include="..\..\Provide_Code\protocolgenxml\rapidjson\allocators.h" />
+    <ClInclude Include="..\..\Provide_Code\protocolgenxml\rapidjson\cursorstreamwrapper.h" />
+    <ClInclude Include="..\..\Provide_Code\protocolgenxml\rapidjson\document.h" />
+    <ClInclude Include="..\..\Provide_Code\protocolgenxml\rapidjson\encodedstream.h" />
+    <ClInclude Include="..\..\Provide_Code\protocolgenxml\rapidjson\encodings.h" />
+    <ClInclude Include="..\..\Provide_Code\protocolgenxml\rapidjson\error\en.h" />
+    <ClInclude Include="..\..\Provide_Code\protocolgenxml\rapidjson\error\error.h" />
+    <ClInclude Include="..\..\Provide_Code\protocolgenxml\rapidjson\filereadstream.h" />
+    <ClInclude Include="..\..\Provide_Code\protocolgenxml\rapidjson\filewritestream.h" />
+    <ClInclude Include="..\..\Provide_Code\protocolgenxml\rapidjson\fwd.h" />
+    <ClInclude Include="..\..\Provide_Code\protocolgenxml\rapidjson\internal\biginteger.h" />
+    <ClInclude Include="..\..\Provide_Code\protocolgenxml\rapidjson\internal\diyfp.h" />
+    <ClInclude Include="..\..\Provide_Code\protocolgenxml\rapidjson\internal\dtoa.h" />
+    <ClInclude Include="..\..\Provide_Code\protocolgenxml\rapidjson\internal\ieee754.h" />
+    <ClInclude Include="..\..\Provide_Code\protocolgenxml\rapidjson\internal\itoa.h" />
+    <ClInclude Include="..\..\Provide_Code\protocolgenxml\rapidjson\internal\meta.h" />
+    <ClInclude Include="..\..\Provide_Code\protocolgenxml\rapidjson\internal\pow10.h" />
+    <ClInclude Include="..\..\Provide_Code\protocolgenxml\rapidjson\internal\regex.h" />
+    <ClInclude Include="..\..\Provide_Code\protocolgenxml\rapidjson\internal\stack.h" />
+    <ClInclude Include="..\..\Provide_Code\protocolgenxml\rapidjson\internal\strfunc.h" />
+    <ClInclude Include="..\..\Provide_Code\protocolgenxml\rapidjson\internal\strtod.h" />
+    <ClInclude Include="..\..\Provide_Code\protocolgenxml\rapidjson\internal\swap.h" />
+    <ClInclude Include="..\..\Provide_Code\protocolgenxml\rapidjson\istreamwrapper.h" />
+    <ClInclude Include="..\..\Provide_Code\protocolgenxml\rapidjson\memorybuffer.h" />
+    <ClInclude Include="..\..\Provide_Code\protocolgenxml\rapidjson\memorystream.h" />
+    <ClInclude Include="..\..\Provide_Code\protocolgenxml\rapidjson\msinttypes\inttypes.h" />
+    <ClInclude Include="..\..\Provide_Code\protocolgenxml\rapidjson\msinttypes\stdint.h" />
+    <ClInclude Include="..\..\Provide_Code\protocolgenxml\rapidjson\ostreamwrapper.h" />
+    <ClInclude Include="..\..\Provide_Code\protocolgenxml\rapidjson\pointer.h" />
+    <ClInclude Include="..\..\Provide_Code\protocolgenxml\rapidjson\prettywriter.h" />
+    <ClInclude Include="..\..\Provide_Code\protocolgenxml\rapidjson\rapidjson.h" />
+    <ClInclude Include="..\..\Provide_Code\protocolgenxml\rapidjson\reader.h" />
+    <ClInclude Include="..\..\Provide_Code\protocolgenxml\rapidjson\schema.h" />
+    <ClInclude Include="..\..\Provide_Code\protocolgenxml\rapidjson\stream.h" />
+    <ClInclude Include="..\..\Provide_Code\protocolgenxml\rapidjson\stringbuffer.h" />
+    <ClInclude Include="..\..\Provide_Code\protocolgenxml\rapidjson\writer.h" />
+    <ClInclude Include="..\..\Provide_Code\protocolgenxml\ShareHead.h" />
+    <ClInclude Include="..\..\Provide_Code\protocolgenxml\wjs_bbstree.h" />
+    <ClInclude Include="..\..\Provide_Code\protocolgenxml\WJS_JsonStream.h" />
+    <ClInclude Include="..\..\Provide_Code\protocolgenxml\WJS_Lock.h" />
+    <ClInclude Include="..\..\Provide_Code\protocolgenxml\XMLParser.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
